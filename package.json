@@ -6,7 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:dev": "docker-compose -f docker-compose.dev.yml up --build",
+    "docker:dev:down": "docker-compose -f docker-compose.dev.yml down",
+    "docker:prod": "docker-compose up --build -d",
+    "docker:prod:down": "docker-compose down",
+    "docker:build": "docker build -t ielts-course .",
+    "docker:clean": "docker system prune -a"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
